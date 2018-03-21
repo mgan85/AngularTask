@@ -14,15 +14,16 @@ export class AppComponent {
   counter = 1;
 
   addLog() {
-    this.Logs.push(this.counter);
+    // this.Logs.push(this.counter);
+    this.Logs.push(new Date());
     this.counter++;
   }
 
   showParagraph() {
-    return this.counter % 2 === 0;
+    return this.Logs.length % 2 === 0;
   }
 
   getColor(log) {
-    return log > 4 ? "white" : "black";
+    return log > 3 ? "white" : "black";
   }
 }
