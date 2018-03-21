@@ -10,4 +10,11 @@
       </ol>
     </div>
   </div>
+  <button (click)="addLog()">Display Details</button>
+  <p *ngIf="showParagraph()">Event click ({{counter}}) !!!</p>
+  <p
+    *ngFor="let log of Logs"
+    [ngClass]="{afterFour: log > 4}"
+    [ngStyle]="{color: getColor(log)}">
+  {{log}}</p>
 </div>
