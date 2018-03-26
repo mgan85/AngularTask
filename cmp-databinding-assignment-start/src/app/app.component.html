@@ -14,4 +14,19 @@
       </ol>
     </div>
   </div>
+  <hr>
+  <app-game-control (myEvent)="ReactOnEvent($event)"></app-game-control>
+  <hr>
+  <div class="row">
+    <div
+      class="col-xs-3 right"
+      *ngFor="let n of Odd">
+      <app-odd [number]="n"></app-odd>
+    </div>
+    <div
+      class="col-xs-3 left"
+      *ngFor="let n of Even">
+      <app-even [number]="n"></app-even>
+    </div>
+  </div>
 </div>
